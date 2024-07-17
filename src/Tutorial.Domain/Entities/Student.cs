@@ -17,3 +17,4 @@ namespace Tutorial.Domain.Entities
         public virtual ICollection<Course> Courses { get; set; }= new List<Course>();    
     }
 }
+ 

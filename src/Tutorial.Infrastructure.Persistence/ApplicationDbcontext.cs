@@ -18,6 +18,14 @@ namespace Tutorial.Infrastructure.Persistence
         public DbSet<Course> Courses { get; set; }  
         public DbSet<StudentCourse> StudentsCourse { get; set;}
 
-        
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }
